@@ -1,0 +1,20 @@
+@use '../../scss/abstracts/' as *;
+
+.user-info {
+    @include flex(center, flex-start);
+    color: $mainBg;
+    height: 50px;
+    width: 100%;
+    border-bottom: 2px solid $mainColor;
+
+    &__name {
+        padding: 0 $spacing;
+        font-size: $fontSizeLarge;
+        font-weight: 700;
+       
+
+        @include tablet {
+            padding: 0 $mobileSpacing;
+        }
+    }
+}
