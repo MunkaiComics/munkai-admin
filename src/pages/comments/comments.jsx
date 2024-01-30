@@ -1,13 +1,8 @@
-import React from 'react'
-import './comments.scss'
-
+import React from "react";
+import "./comments.scss";
 
 const Comments = () => {
-    return (
-        <div style={{color: "#00002B"}}>
-            This is Comments page
-        </div>
-    )
-}
+  return <div>This is Comments page</div>;
+};
 
-export default Comments
+export default Comments;

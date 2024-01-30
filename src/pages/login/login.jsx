@@ -83,39 +83,43 @@ const Login = () => {
           </Alert>
         </Snackbar>
       )}
-      <div className="wrapper">
-        <div className="logo">
-          <img src={Logo} alt="" />
-        </div>
-        <div className="text-center mt-4 name">Sign into your account</div>
-        <form className="p-3 mt-3" onSubmit={clickSubmit}>
-          <div className="form-field d-flex align-items-center">
-            <span className="fas fa-user"></span>
-            <input
-              type="text"
-              name="email"
-              id="email"
-              placeholder="Email"
-              value={email}
-              onChange={handleChange("email")}
-            />
-          </div>
-          <div className="form-field d-flex align-items-center">
-            <span className="fas fa-key"></span>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Password"
-              value={password}
-              onChange={handleChange("password")}
-            />
-          </div>
+      <div className="signin">
+        <div className="wrapper">
+          <div className="text-center mt-4 name">Sign into your account</div>
+          <form className="p-3 mt-3" onSubmit={clickSubmit}>
+            <div className="form-field d-flex align-items-center">
+              <span className="fas fa-user"></span>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                placeholder="Email"
+                value={email}
+                onChange={handleChange("email")}
+              />
+            </div>
+            <div className="form-field d-flex align-items-center">
+              <span className="fas fa-key"></span>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Password"
+                value={password}
+                onChange={handleChange("password")}
+              />
+            </div>
 
-          <button className="login-btn">Login </button>
-        </form>
-        <div className="password text-center fs-6">
-          <a href="/reset-password">Forget password?</a>
+            <button className="login-btn">Login </button>
+          </form>
+          <div className="password text-center fs-6">
+            <a href="/reset-password">Forgot password?</a>
+          </div>
+        </div>
+        <div className="logo-bg">
+          <div className="logo">
+            <img src={Logo} alt="" />
+          </div>
         </div>
       </div>
     </div>
