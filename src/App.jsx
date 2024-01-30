@@ -12,14 +12,15 @@ import MainLayout from "./layout/MainLayout";
 import Users from "./pages/users/users";
 import Admin from "./pages/admins/admin";
 import Creators from "./pages/creators/creators";
-import Comics from "./pages/comics/comics";
+import Publications from "./pages/publications/publications";
 import NFTs from "./pages/NFTs/nft";
 import Tasks from "./pages/tasks/tasks";
 import Report from "./pages/reports/report";
 import Comments from "./pages/comments/comments";
 import Login from "./pages/login/login";
-import { RequireAuth } from "./components/auth/PrivateRoute";
 import Logout from "./pages/logout/Logout";
+import ResetPassword from "./pages/reset-password/reset-password";
+import { RequireAuth } from "./components/auth/PrivateRoute";
 import CreateAdmin from "./pages/admins/CreateAdmin";
 import { RequirePermission } from "./components/auth/RequirePermission";
 import AdminSettings from "./pages/admins/AdminSettings";
@@ -28,35 +29,38 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path='/' element={<Navigate to='/dashboard' />} />
-        <Route exact path='/login' element={<Login />} />
-        <Route exact path='/logout' element={<Logout />} />
+        <Route exact path="/" element={<Navigate to="/dashboard" />} />
+        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/logout" element={<Logout />} />
+        <Route exact path="/reset-password" element={<ResetPassword />} />
         <Route
-          path='/dashboard'
+          path="/dashboard"
           element={
             <RequireAuth>
               <MainLayout />
             </RequireAuth>
-          }>
+          }
+        >
           <Route index element={<Dashboard />} />
-          <Route path='users' element={<Users />} />
+          <Route path="users" element={<Users />} />
           <Route
-            path='admins'
+            path="admins"
             element={
-              <RequirePermission permission='Admin User Management'>
+              <RequirePermission permission="Admin User Management">
                 <Outlet />
               </RequirePermission>
-            }>
+            }
+          >
             <Route index element={<Admin />} />
-            <Route path='create/:id' element={<CreateAdmin />} />
-            <Route path=':id' element={<AdminSettings />} />
+            <Route path="create/:id" element={<CreateAdmin />} />
+            <Route path=":id" element={<AdminSettings />} />
           </Route>
-          <Route path='creators' element={<Creators />} />
-          <Route path='comics' element={<Comics />} />
-          <Route path='nfts' element={<NFTs />} />
-          <Route path='comments' element={<Comments />} />
-          <Route path='tasks' element={<Tasks />} />
-          <Route path='reports' element={<Report />} />
+          <Route path="creators" element={<Creators />} />
+          <Route path="publications" element={<Publications />} />
+          <Route path="nfts" element={<NFTs />} />
+          <Route path="comments" element={<Comments />} />
+          <Route path="tasks" element={<Tasks />} />
+          <Route path="reports" element={<Report />} />
         </Route>
       </Routes>
     </BrowserRouter>

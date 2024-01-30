@@ -9,7 +9,7 @@ import { login } from "../../redux/actions";
 import MuiAlert, { AlertProps } from "@mui/material/Alert";
 
 const Alert = React.forwardRef(function Alert(props, ref) {
-  return <MuiAlert elevation={6} ref={ref} variant='filled' {...props} />;
+  return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
 
 const Login = () => {
@@ -67,53 +67,55 @@ const Login = () => {
         <Snackbar
           open={errorToastOpen}
           autoHideDuration={5000}
-          anchorOrigin={{horizontal: "left", vertical: "top"}}
+          anchorOrigin={{ horizontal: "left", vertical: "top" }}
           onClose={() => {
             setErrorToastOpen(false);
-          }}>
+          }}
+        >
           <Alert
             onClose={() => {
               setErrorToastOpen(false);
             }}
-            severity='error'
-            sx={{ width: "100%" }}>
+            severity="error"
+            sx={{ width: "100%" }}
+          >
             {state.authentication.error}
           </Alert>
         </Snackbar>
       )}
-      <div className='wrapper'>
-        <div className='logo'>
-          <img src={Logo} alt='' />
+      <div className="wrapper">
+        <div className="logo">
+          <img src={Logo} alt="" />
         </div>
-        <div className='text-center mt-4 name'>Sign into your account</div>
-        <form className='p-3 mt-3' onSubmit={clickSubmit}>
-          <div className='form-field d-flex align-items-center'>
-            <span className='fas fa-user'></span>
+        <div className="text-center mt-4 name">Sign into your account</div>
+        <form className="p-3 mt-3" onSubmit={clickSubmit}>
+          <div className="form-field d-flex align-items-center">
+            <span className="fas fa-user"></span>
             <input
-              type='text'
-              name='email'
-              id='email'
-              placeholder='Email'
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Email"
               value={email}
               onChange={handleChange("email")}
             />
           </div>
-          <div className='form-field d-flex align-items-center'>
-            <span className='fas fa-key'></span>
+          <div className="form-field d-flex align-items-center">
+            <span className="fas fa-key"></span>
             <input
-              type='password'
-              name='password'
-              id='password'
-              placeholder='Password'
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
               value={password}
               onChange={handleChange("password")}
             />
           </div>
 
-          <button className='login-btn'>Login </button>
+          <button className="login-btn">Login </button>
         </form>
-        <div className='password text-center fs-6'>
-          <a href='#'>Forget password?</a>
+        <div className="password text-center fs-6">
+          <a href="/reset-password">Forget password?</a>
         </div>
       </div>
     </div>

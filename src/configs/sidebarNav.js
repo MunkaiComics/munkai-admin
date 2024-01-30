@@ -21,13 +21,13 @@ const sidebarNav = [
     link: "/dashboard/creators",
     section: "creators",
     icon: <i className="fa fa-ghost"></i>,
-    text: "Creators", 
+    text: "Creators",
   },
   {
-    link: "/dashboard/comics",
-    section: "comics",
+    link: "/dashboard/publications",
+    section: "publications",
     icon: <i className="fa fa-book"></i>,
-    text: "Comics",
+    text: "Publications",
   },
   {
     link: "/dashboard/nfts",
