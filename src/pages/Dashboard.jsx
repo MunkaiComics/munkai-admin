@@ -77,8 +77,8 @@ const Dashboard = () => {
       value: formatNumberCompact(totalCreators),
     },
     {
-      title: "Comics",
-      subtitle: "Total comics as at today",
+      title: "Publications",
+      subtitle: "Total Publications as at today",
       value: formatNumberCompact(totalComics),
     },
     {
@@ -90,26 +90,26 @@ const Dashboard = () => {
   return (
     <DashboardWrapper>
       <DashboardWrapperMain>
-        <div className='col-12'>
-          <div className='row'>
+        <div className="col-12">
+          <div className="row">
             {summary.map((item, index) => (
-              <div key={`summary-${index}`} className='col-lg-3 col-md-6 mb'>
+              <div key={`summary-${index}`} className="col-lg-3 col-md-6 mb">
                 <SummaryBox item={item} />
               </div>
             ))}
           </div>
         </div>
-        <div className='col-12'>
-          <div className='row'>
+        <div className="col-12">
+          <div className="row">
             {data.socials.map((item, index) => (
-              <div key={`socials-${index}`} className='col-lg-3 col-md-6 mb'>
+              <div key={`socials-${index}`} className="col-lg-3 col-md-6 mb">
                 <SocialBox item={item} />
               </div>
             ))}
           </div>
         </div>
-        <div className='row'>
-          <div className='col-12'>
+        <div className="row">
+          <div className="col-12">
             <Box>
               <UsersByMonthsChart />
             </Box>
@@ -168,7 +168,7 @@ const UsersByMonthsChart = () => {
   };
   return (
     <>
-      <div className='title mb'>Users by Months</div>
+      <div className="title mb">Users by Months</div>
       <div>
         <Bar options={chartOptions} data={chartData} height={`300px`} />
       </div>
