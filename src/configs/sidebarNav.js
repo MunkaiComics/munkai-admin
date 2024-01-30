@@ -24,6 +24,12 @@ const sidebarNav = [
     text: "Creators",
   },
   {
+    link: "/dashboard/add-creators",
+    section: "add-creators",
+    icon: <i className="fa fa-ghost"></i>,
+    text: "Add-Creators",
+  },
+  {
     link: "/dashboard/publications",
     section: "publications",
     icon: <i className="fa fa-book"></i>,

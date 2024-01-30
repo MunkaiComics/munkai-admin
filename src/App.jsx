@@ -12,6 +12,7 @@ import MainLayout from "./layout/MainLayout";
 import Users from "./pages/users/users";
 import Admin from "./pages/admins/admin";
 import Creators from "./pages/creators/creators";
+import AddCreators from "./pages/add-creators/add-creators";
 import Publications from "./pages/publications/publications";
 import NFTs from "./pages/NFTs/nft";
 import Tasks from "./pages/tasks/tasks";
@@ -56,6 +57,7 @@ function App() {
             <Route path=":id" element={<AdminSettings />} />
           </Route>
           <Route path="creators" element={<Creators />} />
+          <Route path="add-creators" element={<AddCreators />} />
           <Route path="publications" element={<Publications />} />
           <Route path="nfts" element={<NFTs />} />
           <Route path="comments" element={<Comments />} />
