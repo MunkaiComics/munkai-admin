@@ -1,13 +1,8 @@
-import React from 'react'
-import './nft.scss'
-
+import React from "react";
+import "./nft.scss";
 
 const NFTs = () => {
-    return (
-        <div style={{color: "#00002B"}}>
-            This is NFTs page
-        </div>
-    )
-}
+  return <div>This is NFTs page</div>;
+};
 
-export default NFTs
+export default NFTs;

@@ -1,76 +1,81 @@
+.signin {
+  max-width: 600px;
+  margin: 200px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #daeaf7;
+  border-radius: 5px;
+}
 
 .wrapper {
-    max-width: 400px;
-    min-height: 500px;
-    margin: 80px auto;
-    padding: 40px 30px 30px 30px;
-    background-color: #00002B;
-    border-radius: 15px;
+  padding: 0px 30px 10px 10px;
+  border-right: 2px solid #daeaf7;
 }
 
 .logo {
-    width: 250px;
-    margin: auto;
+  padding: 0px 10px 0px 30px;
+  width: 250px;
+  margin: auto;
 }
 
 .wrapper .name {
-    font-weight: 600;
-    font-size: 1.4rem;
-    letter-spacing: 1.3px;
-    padding-left: 10px;
-    color: #DAEAF7;
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 1.3px;
+  color: #daeaf7;
 }
 
 .wrapper .form-field input {
-    width: 100%;
-    display: block;
-    border: none;
-    outline: none;
-    background: none;
-    font-size: 1.2rem;
-    color: #00002B;
-    padding: 10px 15px 10px 10px;
+  width: 100%;
+  display: block;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1rem;
+  color: #00002b;
+  padding: 10px 15px 10px 15px;
 }
 
 .wrapper .form-field {
-    padding-left: 10px;
-    margin-bottom: 20px;
-    border-radius: 20px;
-    background-color: #DAEAF7;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  background-color: #daeaf7;
 }
 
 .wrapper .form-field .fas {
-    color: #00002B;
+  color: #00002b;
 }
 
 .wrapper .login-btn {
-    width: 100%;
-    height: 40px;
-    background-color: #4FA5D8;
-    color: #fff;
-    border-radius: 15px;
-    letter-spacing: 1.3px;
-    text-align: center;
-    padding-top: 6px;
+  padding: 15px;
+  height: 40px;
+  background-color: #4fa5d8;
+  color: #fff;
+  border-radius: 10px;
+  letter-spacing: 1.3px;
+  text-align: center;
+  padding-top: 6px;
 }
 
 .wrapper .login-btn:hover {
-    background-color: #039BE5;
+  background-color: #039be5;
 }
 
 .password a {
-    text-decoration: none;
-    font-size: 0.8rem;
-    color: #DAEAF7;
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: #daeaf7;
 }
 
 .password a:hover {
-    color: #4FA5D8;
+  color: #4fa5d8;
 }
 
-@media(max-width: 380px) {
-    .wrapper {
-        margin: 30px 30px;
-        padding: 40px 15px 15px 15px;
-    }
+@media (max-width: 380px) {
+  .wrapper {
+    margin: 30px 30px;
+    padding: 40px 15px 15px 15px;
+  }
 }

@@ -2,7 +2,7 @@ import React from "react";
 import "./reset-password.css";
 
 const ResetPassword = () => {
-  return <div className="text">ResetPassword Page</div>;
+  return <div>ResetPassword Page</div>;
 };
 
 export default ResetPassword;
